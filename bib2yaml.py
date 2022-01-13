@@ -14,34 +14,24 @@ def bib2yaml(default, not_fields):
     in_file = str(os.getcwd()) + "/" + in_file
     out_file = str(os.getcwd()) + "/" + out_file
 
-    # Read input file and nitialize list for references, counter r, default reference and non-wanted fields list
-    ref_dict_list = []
+    # Read input file and initialize list for references, counter r, default reference and non-wanted fields list
     with open(in_file, 'r') as fr:
         list_lines = fr.readlines()
-    r = -1
+    r = 0
+    ref_list = []
 
-    # Iterate through lines, and create dictionary for each reference
+    # Iterate through lines, and create list of lines
     for str_line in list_lines:
         if str_line.startswith('@'):
-            r+=1
-            ref_dict_list.append(default)
             type = str_line.split('{')[0].replace("@", "")
-            ref_dict_list[r]["type"] = type
+            ref_list.append("- " + "type" + ": " + type)
         elif not str_line.startswith('}') and str_line != "\n":
             field = str_line.split('={')[0].replace(" ", "")
             if field not in not_fields:
                 value = str_line.split(field+'={')[1].replace('},\n', '').replace('}\n', '')
-                ref_dict_list[r][field] = value
-
-    # Move dictionary to list
-    ref_list = []
-    for ref_dict in ref_dict_list:
-        for i, key in enumerate(ref_dict):
-            if i==0:
-                ref_list.append("- " + key + ": " + ref_dict[key]) # Might need to add a space here
-            else:
-                ref_list.append("    " + key + ": " + ref_dict[key]) # Might need to add a space here
-
+                ref_list.append("    " + field + ": " + value)
+        if  str_line.startswith('}'):
+            r += 1
 
     with open(out_file, 'w') as fw:
        fw.write('\n'.join(ref_list))
