@@ -29,7 +29,7 @@ def bib2yaml(default, not_fields):
             field = str_line.split('={')[0].replace(" ", "")
             if field not in not_fields:
                 value = str_line.split(field+'={')[1].replace('},\n', '').replace('}\n', '')
-                ref_list.append("    " + field + ": " + "\""+value+"\"")
+                ref_list.append("  " + field + ": " + "\""+value+"\"")  #  add more spaces here if needed
         if  str_line.startswith('}'):
             r += 1
 
