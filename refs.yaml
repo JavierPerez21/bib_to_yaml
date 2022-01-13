@@ -1,17 +1,17 @@
-- type: article
-    title: Intriguing properties of neural networks
-    author: Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob
-    journal: arXiv preprint arXiv:1312.6199
-    year: 2013
-- type: inproceedings
-    title: Protecting voice controlled systems using sound source identification based on acoustic cues
-    author: Gong, Yuan and Poellabauer, Christian
-    booktitle: 2018 27th International Conference on Computer Communication and Networks (ICCCN)
-    pages: 1--9
-    year: 2018
-    organization: IEEE
-- type: article
-    title: Intriguing properties of neural networks
-    author: Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob
-    journal: arXiv preprint arXiv:1312.6199
-    year: 2013
+- type: "article"
+    title: "Intriguing properties of neural networks"
+    author: "Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob"
+    journal: "arXiv preprint arXiv:1312.6199"
+    year: "2013"
+- type: "inproceedings"
+    title: "Protecting voice controlled systems using sound source identification based on acoustic cues"
+    author: "Gong, Yuan and Poellabauer, Christian"
+    booktitle: "2018 27th International Conference on Computer Communication and Networks (ICCCN)"
+    pages: "1--9"
+    year: "2018"
+    organization: "IEEE"
+- type: "article"
+    title: "Intriguing properties of neural networks"
+    author: "Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob"
+    journal: "arXiv preprint arXiv:1312.6199"
+    year: "2013"

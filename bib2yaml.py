@@ -24,12 +24,12 @@ def bib2yaml(default, not_fields):
     for str_line in list_lines:
         if str_line.startswith('@'):
             type = str_line.split('{')[0].replace("@", "")
-            ref_list.append("- " + "type" + ": " + type)
+            ref_list.append("- " + "type" + ": " + "\""+type+"\"")
         elif not str_line.startswith('}') and str_line != "\n":
             field = str_line.split('={')[0].replace(" ", "")
             if field not in not_fields:
                 value = str_line.split(field+'={')[1].replace('},\n', '').replace('}\n', '')
-                ref_list.append("    " + field + ": " + value)
+                ref_list.append("    " + field + ": " + "\""+value+"\"")
         if  str_line.startswith('}'):
             r += 1
 
